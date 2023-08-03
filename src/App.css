@@ -1,0 +1,85 @@
+.cats4LyfTitle {
+    color: white;
+}
+
+.cat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px rgb(243, 198, 198);
+    width: 204px;
+    height: 311px;
+  }
+  .catPic {
+    width: 200px;
+    height: 200px;
+    
+  }
+  
+  .catPic:hover {
+    opacity: 0.4;
+  }
+  
+  .shoppingCart{
+    font-size: 20pt;
+    text-align: right;
+    margin-right: 10%;
+  }
+  
+  .availableCats, .basketCat, .checkout {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    gap: 10px;
+    grid-template-columns: repeat(5, 20%);
+    justify-content: center;
+    margin: 0;
+  }
+  
+  .basketCat {
+    flex-direction: column;
+  }
+  
+  .text {
+    margin: 3px;
+  }
+  
+  .btn {
+    margin-top: 5px;
+  }
+  
+  .catContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .Modal {
+    display: flex;
+    position: absolute;
+    background-color: aliceblue;
+    border: 8px;
+    border-style: ridge;
+    border-radius: 8px;
+    border-color: rgb(223, 5, 5);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50%
+    
+  }
+  
+  .modalImg {
+    height: 400px;
+    width: 400px;
+  }
+  
+  .Basket {
+    width: 250px;
+    height: 800px;
+    border: 1px solid black;
+    align-content: center;
+    overflow: scroll;
+    box-sizing: border-box;
+  }
