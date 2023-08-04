@@ -90,3 +90,8 @@
     top: 0
 
   }
+
+  .checkoutTitle, .totalPrice, .catCheckout{
+    display: flex;
+    justify-content: center;
+  }

@@ -1,33 +1,43 @@
-import './App.css';
-import { BrowserRouter, Routes, Route, Link,} from 'react-router-dom';
+import "./App.css";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import styled from "styled-components";
-import Checkout from './pages/checkout';
-import { useState } from 'react';
-import Home from './pages/Home';
+import Checkout from "./pages/checkout";
+import { useState } from "react";
+import Home from "./pages/Home";
 
-function App() {  
+function App() {
   const [basket, setBasket] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
-  return (  
+  return (
     <div className="App">
-      <BrowserRouter>  
-      <Wrapper>
-        <h1 className='cats4LyfTitle'>Cats4Lyf</h1>
-        <NavBarItem to='/'>Home</NavBarItem>
-        <NavBarItem to='/checkout'>Checkout</NavBarItem>
-      </Wrapper>
-      <Routes>
-        <Route path='/' element={<Home basket={basket} setBasket={setBasket} totalPrice={totalPrice} setTotalPrice={setTotalPrice}/>}></Route>
-        <Route path="/checkout" element={<Checkout basket={basket} totalPrice={totalPrice}/>} />
-      </Routes>
+      <BrowserRouter>
+        <Wrapper>
+          <h1 className="cats4LyfTitle">Cats4Lyf</h1>
+          <NavBarItem to="/">Home</NavBarItem>
+          <NavBarItem to="/checkout">Checkout</NavBarItem>
+        </Wrapper>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home
+                basket={basket}
+                setBasket={setBasket}
+                totalPrice={totalPrice}
+                setTotalPrice={setTotalPrice}
+              />
+            }
+          ></Route>
+          <Route
+            path="/checkout"
+            element={<Checkout basket={basket} totalPrice={totalPrice} />}
+          />
+        </Routes>
       </BrowserRouter>
-      
     </div>
   );
-  
 }
 export default App;
-
 
 export const Wrapper = styled.div`
   display: flex;
