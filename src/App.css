@@ -66,13 +66,11 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 50%
-    
   }
   
   .modalImg {
-    height: 400px;
-    width: 400px;
+    height: 40%;
+    width: 60%;
   }
   
   .Basket {
@@ -82,4 +80,11 @@
     align-content: center;
     overflow: scroll;
     box-sizing: border-box;
+  }
+
+  .modalBtn {
+    position: absolute;
+    right: 0;
+    top: 0
+
   }
